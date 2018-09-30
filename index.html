@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0"/ charset="utf-8">
+	<title>网页版扫雷</title>
+	<link rel='stylesheet' type='text/css' href='index.css'>
+</head>
+<body>
+	<div class="main" id='JMS_main'>
+		<table id="landmine"></table>
+			<div id="operation">
+				<div class="tip">
+					剩余雷数:<span class="light red" id="landMineCount">0</span>个
+				</div>
+				<div class="tip">持续时间:<span class="light f60" id="costTime">0</span>秒</div>
+				<form oninput="output.value=range.value+'秒'">
+				<fieldset>
+					<legeng>难度选择:</legeng>
+					<br/>
+					<input  type="radio" name="level" id='1level' checked="checked" value='10'/>
+					<label for="1level">初级(10*10)</label><br/>
+					<input type="radio" name="level" id="mlevel" value="15"/>
+					<label  for="mlevel">中级(15*15)</label><br/>
+					<input  type="radio" name="level" id='hlevel' value="20"/>
+					<label for="hlevel">高级(20*20)</label><br/>
+					<label for="range">选择时间:</label>
+					<input id="range" type="range" name="range" min="60" max="300" step="1" value="60"/><br/>
+					<output id='result' name="output" >60秒</output>
+				</fieldset>
+
+				<input type="button" id="begin" value="开始游戏"/><br/>
+				<input type="button" id="close" value="结束游戏"/><br/>
+				</form>
+				<div class="tip txtleft">
+					提示:
+					<ul>
+						<li>1.点击"开始游戏"游戏开始计时</li>
+						<li>2.游戏过程中点击"开始游戏"将开始新游戏</li>
+					</ul>
+				</div>
+			</div>
+		
+	</div>
+	<script type="text/javascript" src="jms.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
